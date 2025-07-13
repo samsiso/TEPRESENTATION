@@ -1,55 +1,72 @@
-// SLIDE 13: Global AI Investment Flow Analysis (1 min)
+// SLIDE 13: Follow the Money - The $131B Misdirection That Creates Our Opportunity (2 min)
 export const slide13 = {
-    title: "Global AI Investment Flow Analysis",
+    title: "Follow the Money: The $131B Misdirection That Creates Our Opportunity",
     singleColumn: true,
     content: `
-        <h2>Global AI Investment Flow Analysis</h2>
-        <h3>$131.5B Annual Investment Breakdown by Category and Geography</h3>
-        <div class="chart-container">
-            <canvas id="investment-flow-chart"></canvas>
-        </div>
-        <div class="stats-grid">
-            <div class="stat-card" data-references='["Crunchbase (2024) \\"Global AI Investment Report\\" Q3 2024"]'>
-                <div class="number">$131.5B</div>
-                <div class="label">Total Annual Investment<br><small>Global AI Funding 2024</small></div>
+        <div style="min-height: calc(100vh - 140px); display: flex; flex-direction: column; justify-content: flex-start; padding: 40px; background: var(--siso-black); margin: 0; box-sizing: border-box; width: 100%; position: relative;">
+            
+            <!-- Money Trail Banner -->
+            <div style="background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%); padding: 18px; border-radius: 12px; text-align: center; margin-bottom: 30px; box-shadow: 0 6px 20px rgba(255,215,0,0.3); position: relative;">
+                <div style="position: absolute; top: -2px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #ffd700, #00ff88, #ffd700); animation: pulse 3s infinite;"></div>
+                <span style="font-size: 1.3rem; font-weight: 800; color: black; text-transform: uppercase; letter-spacing: 1px;">💰 FOLLOW THE MONEY: $131B Investment Misdirection</span>
             </div>
-            <div class="stat-card">
-                <div class="number">67%</div>
-                <div class="label">Infrastructure Investment<br><small>$88.1B Cloud & Hardware</small></div>
+
+            <!-- Header Section -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h1 style="font-size: 3.4rem; font-weight: 900; margin-bottom: 20px; background: var(--siso-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1;">
+                    Follow the Money
+                </h1>
+                <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--siso-yellow); margin-bottom: 15px;">
+                    The $131B Misdirection That Creates Our Opportunity
+                </h2>
+                <div style="height: 4px; width: 280px; background: var(--siso-gradient); margin: 20px auto; border-radius: 2px; box-shadow: 0 2px 10px rgba(255,107,53,0.4);"></div>
+                <p style="font-size: 1.4rem; color: rgba(255,255,255,0.95); font-weight: 600;">
+                    💡 VCs fund the wrong things = massive opportunity for the right ones
+                </p>
             </div>
-            <div class="stat-card">
-                <div class="number">23%</div>
-                <div class="label">Application Development<br><small>$30.2B Software</small></div>
+
+            <!-- Investment Flow Analysis Content -->
+            <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; margin: 25px 0;">
+                <h3 style="text-align: center; color: var(--siso-yellow); font-size: 1.8rem; margin-bottom: 25px;">💸 Where $131.5B Actually Goes (The Big Misdirection)</h3>
+                <!-- Three funding categories with analysis -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 25px;" data-references='["Crunchbase (2024) \\"Global AI Investment Report\\" Q3 2024", "CB Insights (2024) \\"State of AI Funding\\" Annual Report"]'>
+                    <div style="background: rgba(255,68,68,0.1); border: 2px solid #ff4444; padding: 25px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">🏗️</div>
+                        <h4 style="color: #ff4444; font-size: 1.4rem; margin-bottom: 10px;">Infrastructure (Overfunded)</h4>
+                        <div style="font-size: 2.8rem; font-weight: 900; color: #ff4444;">67%</div>
+                        <div style="font-size: 1.6rem; font-weight: 700; color: #ff4444;">$88.1B</div>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8);">Cloud, GPUs, chips - building for tomorrow</p>
+                    </div>
+                    <div style="background: rgba(255,170,0,0.1); border: 2px solid #ffaa00; padding: 25px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">📱</div>
+                        <h4 style="color: #ffaa00; font-size: 1.4rem; margin-bottom: 10px;">Applications (Saturated)</h4>
+                        <div style="font-size: 2.8rem; font-weight: 900; color: #ffaa00;">23%</div>
+                        <div style="font-size: 1.6rem; font-weight: 700; color: #ffaa00;">$30.2B</div>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8);">ChatGPT clones - intense competition</p>
+                    </div>
+                    <div style="background: rgba(0,255,136,0.1); border: 2px solid #00ff88; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 10px 25px rgba(0,255,136,0.4);">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">🔧</div>
+                        <h4 style="color: #00ff88; font-size: 1.4rem; margin-bottom: 10px;">Services (OPPORTUNITY)</h4>
+                        <div style="font-size: 2.8rem; font-weight: 900; color: #00ff88;">10%</div>
+                        <div style="font-size: 1.6rem; font-weight: 700; color: #00ff88;">$13.2B</div>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.9); font-weight: 600;">156% growth, least funded!</p>
+                    </div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="number">10%</div>
-                <div class="label">Services & Integration<br><small>$13.2B Our Market</small></div>
+
+            <!-- Investment Chart -->
+            <div class="chart-container" data-references='["Crunchbase (2024) Global AI Investment Report", "PwC (2024) AI Investment Analysis"]'>
+                <canvas id="investment-flow-chart"></canvas>
             </div>
-        </div>
-        <div class="two-column">
-            <div class="column">
-                <h4>💰 Investment by Category:</h4>
-                <ul style="text-align: left;">
-                    <li><strong>Infrastructure (67%):</strong> Cloud computing, chips, data centers</li>
-                    <li><strong>Applications (23%):</strong> Software development, platforms</li>
-                    <li><strong>Services (10%):</strong> Integration, consulting, training</li>
-                    <li><strong>Growth Rate:</strong> Services growing fastest at 156% YoY</li>
-                </ul>
+            <!-- Video Pause Point -->
+            <div style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); border: 3px solid var(--siso-yellow); padding: 20px; border-radius: 15px; margin: 25px 0; position: relative;">
+                <div style="position: absolute; top: -12px; left: 25px; background: var(--siso-yellow); color: var(--siso-black); padding: 6px 15px; border-radius: 15px; font-size: 0.9rem; font-weight: 700;">⏸️ PAUSE & REFLECT</div>
+                <h4 style="color: var(--siso-yellow); font-size: 1.4rem; margin: 15px 0 15px 0; text-align: center;">Follow the Money in Your Industry</h4>
+                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); text-align: center; line-height: 1.5; font-weight: 500;">
+                    Look at where investment goes vs where profits actually come from. Often they're completely different.
+                    <br><br><strong style="color: var(--siso-yellow);">Question:</strong> In your field, what's overfunded and what's underfunded but profitable?
+                </p>
             </div>
-            <div class="column">
-                <h4>🌍 Geographic Distribution:</h4>
-                <ul style="text-align: left;">
-                    <li><strong>North America (72%):</strong> $94.7B, dominated by US</li>
-                    <li><strong>Europe (18%):</strong> $23.7B, led by UK & Germany</li>
-                    <li><strong>Asia (10%):</strong> $13.2B, China & Singapore</li>
-                    <li><strong>Opportunity:</strong> Geographic expansion potential</li>
-                </ul>
-            </div>
-        </div>
-        <div class="highlight">
-            <h4>📊 Strategic Investment Insight:</h4>
-            <p>Services receive only 10% of total investment despite 156% growth rate, indicating massive underfunding 
-            and opportunity for entrepreneurs in the integration services space.</p>
         </div>
     `,
     hasChart: true,
@@ -58,28 +75,36 @@ export const slide13 = {
         options: {
             type: 'doughnut',
             data: {
-                labels: ['Infrastructure (67%)', 'Applications (23%)', 'Services (10%)'],
-                datasets: [{
-                    data: [67, 23, 10],
-                    backgroundColor: ['#ff6b35', '#ff8659', '#ffd23f'],
-                    borderColor: '#ffffff',
-                    borderWidth: 2
-                }]
+                labels: ['Infrastructure (Overfunded)', 'Applications (Saturated)', 'Services (OPPORTUNITY)'],
+                datasets: [
+                    {
+                        label: 'Investment Distribution',
+                        data: [67, 23, 10],
+                        backgroundColor: ['#ff4444', '#ffaa00', '#00ff88'],
+                        borderColor: '#ffffff',
+                        borderWidth: 3,
+                        hoverBackgroundColor: ['#ff6666', '#ffcc44', '#44ffaa']
+                    }
+                ]
             },
             options: {
                 responsive: true,
                 plugins: {
                     title: {
                         display: true,
-                        text: 'AI Investment Distribution by Category ($131.5B)',
-                        color: '#ffffff'
+                        text: 'The Great Funding Misdirection: $131.5B Investment Reality',
+                        color: '#ffffff',
+                        font: { size: 16 }
                     },
                     legend: {
+                        position: 'bottom',
                         labels: {
-                            color: '#ffffff'
+                            color: '#ffffff',
+                            boxWidth: 15
                         }
                     }
-                }
+                },
+                cutout: '40%'
             }
         }
     }

@@ -1,6 +1,6 @@
 class PresentationApp {
     constructor() {
-        this.currentSlide = 0;
+        this.currentSlide = this.loadCurrentSlide();
         this.slides = [];
         this.totalSlides = 30; // We know we have 30 slides
         this.tooltip = null;
@@ -14,6 +14,24 @@ class PresentationApp {
             this.createTooltip();
             this.renderSlide();
         });
+    }
+
+    loadCurrentSlide() {
+        try {
+            const saved = localStorage.getItem('presentationCurrentSlide');
+            return saved ? parseInt(saved) : 0;
+        } catch (error) {
+            console.warn('Could not load saved slide position:', error);
+            return 0;
+        }
+    }
+
+    saveCurrentSlide() {
+        try {
+            localStorage.setItem('presentationCurrentSlide', this.currentSlide.toString());
+        } catch (error) {
+            console.warn('Could not save slide position:', error);
+        }
     }
 
     async loadSlides() {
@@ -506,6 +524,7 @@ class PresentationApp {
     previousSlide() {
         if (this.currentSlide > 0) {
             this.currentSlide--;
+            this.saveCurrentSlide();
             this.renderSlide();
         }
     }
@@ -513,6 +532,7 @@ class PresentationApp {
     nextSlide() {
         if (this.currentSlide < this.totalSlides - 1) {
             this.currentSlide++;
+            this.saveCurrentSlide();
             this.renderSlide();
         }
     }
@@ -520,6 +540,7 @@ class PresentationApp {
     goToSlide(index) {
         if (index >= 0 && index < this.totalSlides) {
             this.currentSlide = index;
+            this.saveCurrentSlide();
             this.renderSlide();
         }
     }
