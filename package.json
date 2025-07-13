@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "live-server --port=3000 --open=/ --watch=.",
     "start": "live-server --port=8080 --open=/",
-    "build": "echo 'Static site - no build needed'",
+    "build": "mkdir -p public && cp -r *.html *.css *.js images slides scripts presentation research documentation styles.css public/ 2>/dev/null || true",
     "preview": "live-server --port=4173 --open=/"
   },
   "keywords": [
