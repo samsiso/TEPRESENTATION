@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise AI by 2032: Interactive Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="presentation-container">
+        <header class="presentation-header">
+            <div class="header-left">
+                <button class="mobile-nav-btn" id="mobile-nav-btn">☰</button>
+                <h1 id="slide-title">AI Integration Service Opportunities for Team Ventures in 2025</h1>
+            </div>
+            <div class="slide-counter">
+                <span id="current-slide">1</span> / <span id="total-slides">30</span>
+            </div>
+        </header>
+
+        <main class="slide-container">
+            <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+            <div class="slide-navigation-sidebar" id="slide-nav">
+                <div class="nav-header">
+                    <h4>Presentation Flow</h4>
+                    <button class="nav-toggle" id="nav-toggle">←</button>
+                </div>
+                <div class="nav-content">
+                    <div class="nav-current-section">
+                        <h5>Current</h5>
+                        <div class="current-slide-info" id="current-slide-info">
+                            <div class="slide-number">1</div>
+                            <div class="slide-title-nav">Enterprise AI by 2032</div>
+                        </div>
+                    </div>
+                    <div class="nav-upcoming-section">
+                        <h5>Up Next</h5>
+                        <div class="upcoming-slides" id="upcoming-slides">
+                            <!-- Upcoming slides will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="nav-references-section">
+                        <h5>References</h5>
+                        <div class="slide-references-list" id="slide-references-list">
+                            <!-- Slide references will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="slide-content" class="slide-content">
+                <!-- Slide content will be populated by JavaScript -->
+            </div>
+        </main>
+
+        <footer class="presentation-footer">
+            <button id="prev-btn" class="nav-btn" disabled>
+                ← Previous
+            </button>
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <button id="next-btn" class="nav-btn">
+                Next →
+            </button>
+        </footer>
+    </div>
+
+    <script type="module" src="presentation_new.js"></script>
+</body>
+</html>

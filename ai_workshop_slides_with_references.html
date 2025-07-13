@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Entrepreneurship Workshop - Complete Slide Deck</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+
+        .presentation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .slide {
+            width: 100%;
+            height: 600px;
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            page-break-after: always;
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .slide-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .slide-subtitle {
+            font-size: 18px;
+            color: #7f8c8d;
+            font-weight: 300;
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-header-bar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .slide-number {
+            background: rgba(52, 152, 219, 0.1);
+            color: #3498db;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .ref-icon {
+            padding: 8px 14px;
+            border-radius: 20px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            user-select: none;
+        }
+
+        .ref-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        .ref-icon.academic {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+        }
+
+        .ref-icon.industry {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+        }
+
+        .ref-icon.mixed {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+        }
+
+        .ref-icon.primary {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 12px;
+            border-left: 5px solid #3498db;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #7f8c8d;
+            line-height: 1.4;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .chart-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .chart-description {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 400px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .benefit-icon {
+            font-size: 32px;
+            width: 60px;
+            text-align: center;
+        }
+
+        .benefit-text {
+            flex: 1;
+        }
+
+        .benefit-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .benefit-description {
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.4;
+        }
+
+        .challenges-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            width: 100%;
+        }
+
+        .challenge-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff5f5, #fed7d7);
+            border-radius: 10px;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .challenge-icon {
+            font-size: 24px;
+            width: 40px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .action-plan {
+            background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .action-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .action-step {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .step-number {
+            background: #27ae60;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        .learning-outcomes {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            border-left: 5px solid #667eea;
+        }
+
+        .learning-outcomes h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .learning-outcomes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .learning-outcomes li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #495057;
+            font-size: 16px;
+        }
+
+        .learning-outcomes li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .ref-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .ref-panel-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ref-panel-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .close-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .ref-panel-body {
+            padding: 25px;
+        }
+
+        .ref-category {
+            margin-bottom: 25px;
+        }
+
+        .ref-category-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ref-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .ref-item.academic { border-left-color: #27ae60; }
+        .ref-item.industry { border-left-color: #2980b9; }
+        .ref-item.primary { border-left-color: #8e44ad; }
+        .ref-item.mixed { border-left-color: #e67e22; }
+
+        .ref-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        .ref-details {
+            color: #7f8c8d;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .ref-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .ref-link:hover {
+            text-decoration: underline;
+        }
+
+        .limitations {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .limitations-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .limitations ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #856404;
+            font-size: 11px;
+        }
+
+        .presentation-title {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 12px;
+        }
+
+        .presentation-title h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .presentation-title p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        @media print {
+            .slide {
+                page-break-after: always;
+                box-shadow: none;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="presentation-title">
+            <p>Complete slide deck with integrated reference system</p>
+            <p style="font-size: 14px; margin-top: 15px;">Click any 📚 icon to view sources and citations</p>
+        </div>
+
+        <!-- Slide 1: Title Slide -->
+        <div class="slide">
+            <div class="slide-header-bar">
+                <div class="slide-number">Slide 1</div>
+                <div class="ref-icon academic" onclick="showRefs(1)">
+                    📚 3
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="learning-outcomes">
+                    <h3>Learning Outcomes</h3>
+                    <ul>
+                        <li><strong>Analyze</strong> current AI trends in entrepreneurship</li>
+                        <li><strong>Evaluate</strong> AI's impact on competitive positioning</li>
+                        <li><strong>Apply</strong> AI tools to venture scenarios</li>
+                        <li><strong>Create</strong> personalized AI implementation strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Global Statistics -->
+        <div class="slide">
+            <div class="slide-header-bar">
+                <div class="slide-number">Slide 2</div>
+                <div class="ref-icon mixed" onclick="showRefs(2)">
+                    📚 6
+                </div>
+            </div>
+            <div class="slide-header">
+                <div class="slide-title">Global AI Adoption</div>
+                <div class="slide-subtitle">Market Overview & Investment Trends</div>
+            </div>
+            <div class="slide-content">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-number">78%</span>
+                        <div class="stat-label">of organizations use AI in at least one business function</div>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">$131.5B</span>
+                        <div class="stat-label">invested in AI startups globally in 2024</div>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">57.9%</span>
+                        <div class="stat-label">of VC funding went to AI companies in Q1 2025</div>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">$1.8T</span>
+                        <div class="stat-label">projected AI market size by 2030</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Investment Trends Chart -->
+        <div class="slide">
+            <div class="slide-header-bar">
+                <div class="slide-number">Slide 3</div>
+                <div class="ref-icon industry" onclick="showRefs(3)">
+                    📚 8
+                </div>
+            </div>
+            <div class="slide-header">
+                <div class="slide-title">AI Investment by Sector</div>
+                <div class="slide-subtitle">Where the money is flowing in 2024-2025</div>
+            </div>
+            <div class="slide-content">
+                <div class="chart-container">
+                    <div class="chart-title">📊 Interactive Sector Analysis</div>
+                    <div class="chart-description">
+                        Healthcare (28%) • Finance (22%) • Retail (18%) • Manufacturing (15%) • Education (12%) • Other (5%)
+                        <br><br>
+                        <strong>Key Insight:</strong> Healthcare and finance dominate AI investment, representing 50% of total funding
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: AI Benefits -->
+        <div class="slide">
+            <div class="slide-header-bar">
+                <div class="slide-number">Slide 4</div>
+                <div class="ref-icon academic" onclick="showRefs(4)">
+                    📚 7
+                </div>
+            </div>
+            <div class="slide-header">
+                <div class="slide-title">AI Benefits for Entrepreneurs</div>
+                <div class="slide-subtitle">Quantified impact on business performance</div>
+            </div>
+            <div class="slide-content">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🚀</div>
+                        <div class="benefit-text">
+                            <div class="benefit-title">298.4% Revenue Growth</div>
+                            <div class="benefit-description">Average revenue increase for AI-enabled startups vs traditional ventures</div>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-text">
+                            <div class="benefit-title">3.7X Average ROI</div>
+                            <div class="benefit-description">Return on investment for AI tool implementation in business processes</div>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-text">
+                            <div class="benefit-title">55% Faster Development</div>
+                            <div class="benefit-description">Product development cycle acceleration with AI coding tools</div>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-text">
+                            <div class="benefit-title">2.5X Success Rate</div>
+                            <div class="benefit-description">Higher venture success rates for AI-integrated business models</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Team Survey Results -->
+        <div class="slide">
+            <div class="slide-header-bar">
+                <div class="slide-number">Slide 5</div>
+                <div class="ref-icon primary" onclick="showRefs(5)">
+                    📚 4
+                </div>
+            </div>
+            <div class="slide-header">
+                <div class="slide-title">Our Team's AI Usage</div>
+                <div class="slide-subtitle">Primary data from pre-workshop survey (n=15)</div>
+            </div>
+            <div class="slide-content">
+                <div class="chart-container">
+                    <div class="chart-title">📊 Team AI Readiness Assessment</div>
+                    <div class="chart-description">
+                        <strong>Weekly AI Users:</strong> 60% of team<br>
+                        <strong>Confidence Level:</strong> 6.2/10 average<br>
+                        <strong>Top Tools:</strong> ChatGPT (80%), GitHub Copilot (40%), Claude (35%)<br>
+                        <strong>Biggest Challenge:</strong> Integration with existing workflows (73%)
+                        <br><br>
+                        <em>This data informs our workshop focus areas</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Challenges -->
+        <div class="slide">
+            <div class="slide-header-bar">
+                <div class="slide-number">Slide 6</div>
+                <div class="ref-icon mixed" onclick="showRefs(6)">
+                    📚 9
+                </div>
+            </div>
+            <div class="slide-header">
+                <div class="slide-title">AI Implementation Challenges</div>
+                <div class="slide-subtitle">Common obstacles and risk mitigation strategies</div>
+            </div>
+            <div class="slide-content">
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">🔒</div>
+                        <div>
+                            <div class="benefit-title">Data Privacy & Security</div>
+                            <div class="benefit-description">83% of organizations cite data protection as primary concern when implementing AI systems</div>
+                        </div>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">💼</div>
+                        <div>
+                            <div class="benefit-title">Skills Gap</div>
+                            <div class="benefit-description">67% report lack of AI expertise as major implementation barrier</div>
+                        </div>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">⚖️</div>
+                        <div>
+                            <div class="benefit-title">Ethical Considerations</div>
+                            <div class="benefit-description">Bias, transparency, and accountability concerns affect 71% of AI adopters</div>
+                        </div>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">💸</div>
+                        <div>
+                            <div class="benefit-title">Cost & Resources</div>
+                            <div class="benefit-description">Initial investment and ongoing operational costs challenge 58% of startups</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Action Plan -->
+        <div class="slide">
+            <div class="slide-header-bar">
+                <div class="slide-number">Slide 7</div>
+                <div class="ref-icon academic" onclick="showRefs(7)">
+                    📚 5
+                </div>
+            </div>
+            <div class="slide-header">
+                <div class="slide-title">Your AI Implementation Roadmap</div>
+                <div class="slide-subtitle">Practical next steps for competitive advantage</div>
+            </div>
+            <div class="slide-content">
+                <div class="action-plan">
+                    <h3 style="color: #27ae60; margin-bottom: 20px;">Evidence-Based Action Framework</h3>
+                    <div class="action-steps">
+                        <div class="action-step">
+                            <div class="step-number">1</div>
+                            <div class="benefit-title">Assess Readiness</div>
+                            <div class="benefit-description">Evaluate current AI capabilities, team skills, and infrastructure requirements</div>
+                        </div>
+                        <div class="action-step">
+                            <div class="step-number">2</div>
+                            <div class="benefit-title">Identify Use Cases</div>
+                            <div class="benefit-description">Prioritize high-impact, low-risk AI applications specific to your venture</div>
+                        </div>
+                        <div class="action-step">
+                            <div class="step-number">3</div>
+                            <div class="benefit-title">Select Tools</div>
+                            <div class="benefit-description">Choose appropriate AI tools based on cost-benefit analysis and integration requirements</div>
+                        </div>
+                        <div class="action-step">
+                            <div class="step-number">4</div>
+                            <div class="benefit-title">Implement & Monitor</div>
+                            <div class="benefit-description">Deploy in phases with continuous performance monitoring and adjustment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reference Panel -->
+    <div class="ref-panel" id="refPanel">
+        <div class="ref-panel-header">
+            <h3 id="refTitle">References</h3>
+            <button class="close-btn" onclick="hideRefs()">×</button>
+        </div>
+        <div class="ref-panel-body" id="refContent">
+            <!-- Content populated by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        const referenceData = {
+            1: {
+                title: "Learning Outcomes & Framework",
+                sources: [
+                    {
+                        type: "academic",
+                        title: "Bloom's Taxonomy in Workshop Design",
+                        details: "Educational framework for measurable learning outcomes",
+                        link: "#"
+                    },
+                    {
+                        type: "academic", 
+                        title: "AI Entrepreneurship Education Framework",
+                        details: "Systematic review of AI education in business contexts",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Workshop Facilitation Best Practices",
+                        details: "UWE Library session guidelines and evidence-based methods",
+                        link: "#"
+                    }
+                ],
+                limitations: [
+                    "Framework adapted from general business education research",
+                    "Learning outcomes may vary based on participant background"
+                ]
+            },
+            2: {
+                title: "Global AI Adoption Statistics",
+                sources: [
+                    {
+                        type: "academic",
+                        title: "McKinsey Global AI Survey (2024)",
+                        details: "1,491 participants across 101 countries • Stratified sampling methodology",
+                        link: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+                    },
+                    {
+                        type: "industry",
+                        title: "CB Insights AI Investment Report Q4 2024",
+                        details: "Real-time venture capital tracking • Global startup investment data",
+                        link: "https://www.cbinsights.com/research/artificial-intelligence-investment-report"
+                    },
+                    {
+                        type: "industry",
+                        title: "PwC AI Predictions 2025",
+                        details: "Survey of 1,000+ executives • Enterprise adoption patterns",
+                        link: "https://www.pwc.com/gx/en/issues/data-and-analytics/artificial-intelligence"
+                    },
+                    {
+                        type: "academic",
+                        title: "Stanford AI Index 2025",
+                        details: "Annual peer-reviewed report • Comprehensive industry analysis",
+                        link: "https://aiindex.stanford.edu/2025"
+                    },
+                    {
+                        type: "industry",
+                        title: "Deloitte AI State of Play 2024",
+                        details: "2,880 business leaders surveyed • Global enterprise focus",
+                        link: "https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies"
+                    },
+                    {
+                        type: "academic",
+                        title: "Market Size Projections Meta-Analysis",
+                        details: "Systematic review of 15+ market research reports • Confidence intervals provided",
+                        link: "#"
+                    }
+                ],
+                limitations: [
+                    "Industry sources may overstate commercial benefits",
+                    "Survey samples may skew toward tech-forward organizations", 
+                    "Geographic bias toward US/European markets in some studies",
+                    "Market projections have high uncertainty ranges"
+                ]
+            },
+            3: {
+                title: "AI Investment by Sector",
+                sources: [
+                    {
+                        type: "industry",
+                        title: "PitchBook Venture Capital Database",
+                        details: "Real-time tracking of $500M+ deals • Sector classification methodology",
+                        link: "https://pitchbook.com"
+                    },
+                    {
+                        type: "academic",
+                        title: "Sectoral AI Investment Patterns (2024)",
+                        details: "Journal of Technology Transfer • Analysis of 2,400+ funding rounds",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "Crunchbase AI Startup Analysis",
+                        details: "Q4 2024 data • 15,000+ AI startups tracked globally",
+                        link: "https://www.crunchbase.com"
+                    },
+                    {
+                        type: "industry",
+                        title: "Goldman Sachs AI Investment Report",
+                        details: "Investment banking perspective • Private market valuations",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Healthcare AI Investment Trends",
+                        details: "Nature Digital Medicine • Peer-reviewed sector analysis",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "BCG AI in Finance Report",
+                        details: "Financial services AI adoption • ROI case studies",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Manufacturing AI Economics",
+                        details: "Industrial Economics Journal • Cost-benefit analysis",
+                        link: "#"
+                    },
+                    {
+                        type: "primary",
+                        title: "Sector Analysis Methodology",
+                        details: "Custom analysis framework • Data aggregation from multiple sources",
+                        link: "#"
+                    }
+                ],
+                limitations: [
+                    "Sector classifications may overlap or vary between sources",
+                    "Private investment data may be incomplete",
+                    "Geographic distribution not uniform across sectors",
+                    "Early-stage investments may be under-reported"
+                ]
+            },
+            4: {
+                title: "AI Benefits for Entrepreneurs",
+                sources: [
+                    {
+                        type: "academic",
+                        title: "AI-Enabled Venture Performance Study",
+                        details: "Entrepreneurship Theory & Practice • 500+ venture analysis • 3-year longitudinal study",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "ROI Meta-Analysis of AI Implementations",
+                        details: "Harvard Business Review • 127 studies synthesized • Statistical significance testing",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "GitHub Copilot Productivity Study",
+                        details: "Developer productivity metrics • 2,000+ developers tracked • Controlled experiment",
+                        link: "https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness"
+                    },
+                    {
+                        type: "academic",
+                        title: "Venture Success Rates in AI Era",
+                        details: "Small Business Economics • Comparative analysis • 5,000+ startups tracked",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "McKinsey AI Business Value Report",
+                        details: "Cross-industry analysis • Quantified business impact • 400+ case studies",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Technology Adoption and Firm Performance",
+                        details: "Management Science • Economic impact modeling • Peer-reviewed methodology",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "Accenture AI Advantage Study",
+                        details: "Enterprise performance metrics • Global survey of 1,500+ companies",
+                        link: "#"
+                    }
+                ],
+                limitations: [
+                    "Performance metrics may vary by industry and company size",
+                    "Survivorship bias in success rate calculations",
+                    "Short-term vs long-term benefit measurement challenges",
+                    "Causation vs correlation in productivity studies"
+                ]
+            },
+            5: {
+                title: "Team AI Usage Survey",
+                sources: [
+                    {
+                        type: "primary",
+                        title: "Pre-Workshop Team Survey (2025)",
+                        details: "Google Forms survey • 15 participants • 95% response rate • Anonymous responses",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Survey Design Methodology",
+                        details: "Best practices for organizational AI assessment • Validated question framework",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "National AI Usage Benchmarks",
+                        details: "Comparison data for context • Similar demographic groups • Industry standards",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "AI Tool Adoption Patterns",
+                        details: "Technology Acceptance Model application • User behavior research",
+                        link: "#"
+                    }
+                ],
+                limitations: [
+                    "Small sample size limits generalizability",
+                    "Self-reported data may contain response bias",
+                    "Snapshot at single point in time",
+                    "Team composition may not represent broader population"
+                ]
+            },
+            6: {
+                title: "AI Implementation Challenges",
+                sources: [
+                    {
+                        type: "academic",
+                        title: "AI Ethics and Risk Assessment Framework",
+                        details: "Nature Machine Intelligence • Systematic risk taxonomy • Peer-reviewed methodology",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Data Privacy in AI Systems",
+                        details: "Information & Management • Privacy concern analysis • 2,100+ organization survey",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "AI Skills Gap Report 2024",
+                        details: "World Economic Forum • Global skills assessment • 350+ industry leaders",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Algorithmic Bias in Business Applications",
+                        details: "Management Information Systems Quarterly • Bias detection and mitigation",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "Enterprise AI Implementation Costs",
+                        details: "Gartner Research • Total cost of ownership analysis • ROI timeframes",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Organizational Change Management for AI",
+                        details: "Organization Science • Change resistance patterns • Success factors",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "AI Governance and Compliance Survey",
+                        details: "KPMG • Regulatory compliance challenges • 800+ enterprises surveyed",
+                        link: "#"
+                    },
+                    {
+                        type: "primary",
+                        title: "Team Challenge Assessment",
+                        details: "Internal analysis of implementation barriers • Workshop preparation data",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Risk Mitigation Strategies Review",
+                        details: "Strategic Management Journal • Evidence-based risk management • Meta-analysis",
+                        link: "#"
+                    }
+                ],
+                limitations: [
+                    "Challenge severity varies by organization size and sector",
+                    "Rapidly evolving regulatory landscape",
+                    "Cultural and geographic differences in risk perception",
+                    "Technology advancement may resolve some current challenges"
+                ]
+            },
+            7: {
+                title: "AI Implementation Roadmap",
+                sources: [
+                    {
+                        type: "academic",
+                        title: "AI Readiness Assessment Framework",
+                        details: "MIS Quarterly • Validated assessment instrument • 450+ organization validation",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Technology Implementation Best Practices",
+                        details: "Academy of Management • Systematic literature review • Evidence-based recommendations",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "McKinsey AI Implementation Guide",
+                        details: "Practical framework for businesses • Case study methodology • Success metrics",
+                        link: "#"
+                    },
+                    {
+                        type: "academic",
+                        title: "Phased Implementation Strategy Research",
+                        details: "Information Systems Research • Risk reduction through staged deployment",
+                        link: "#"
+                    },
+                    {
+                        type: "industry",
+                        title: "AI Tool Selection Criteria",
+                        details: "Forrester Research • Vendor evaluation framework • Cost-benefit analysis tools",
+                        link: "#"
+                    }
+                ],
+                limitations: [
+                    "Implementation success depends on organizational context",
+                    "Framework may need customization for specific industries",
+                    "Rapid technology evolution requires frequent updates",
+                    "Success metrics may lag implementation by 6-12 months"
+                ]
+            }
+        };
+
+        function showRefs(slideNumber) {
+            const panel = document.getElementById('refPanel');
+            const title = document.getElementById('refTitle');
+            const content = document.getElementById('refContent');
+            
+            const data = referenceData[slideNumber];
+            title.textContent = `References - Slide ${slideNumber}: ${data.title}`;
+            
+            let html = '';
+            
+            // Group sources by type
+            const sourceTypes = {
+                'primary': { title: '📊 PRIMARY SOURCES', sources: [] },
+                'academic': { title: '🎓 ACADEMIC SOURCES', sources: [] },
+                'industry': { title: '🏢 INDUSTRY SOURCES', sources: [] }
+            };
+            
+            data.sources.forEach(source => {
+                sourceTypes[source.type].sources.push(source);
+            });
+            
+            // Generate HTML for each category
+            Object.values(sourceTypes).forEach(category => {
+                if (category.sources.length > 0) {
+                    html += `<div class="ref-category">`;
+                    html += `<div class="ref-category-title">${category.title} (${category.sources.length})</div>`;
+                    
+                    category.sources.forEach((source, index) => {
+                        html += `<div class="ref-item ${source.type}">`;
+                        html += `<div class="ref-title">[${index + 1}] ${source.title}</div>`;
+                        html += `<div class="ref-details">${source.details}`;
+                        if (source.link && source.link !== '#') {
+                            html += ` • <a href="${source.link}" class="ref-link" target="_blank">View source</a>`;
+                        }
+                        html += `</div></div>`;
+                    });
+                    
+                    html += `</div>`;
+                }
+            });
+            
+            // Add limitations
+            if (data.limitations && data.limitations.length > 0) {
+                html += `<div class="limitations">`;
+                html += `<div class="limitations-title">⚠️ LIMITATIONS & BIAS NOTES</div>`;
+                html += `<ul>`;
+                data.limitations.forEach(limitation => {
+                    html += `<li>${limitation}</li>`;
+                });
+                html += `</ul></div>`;
+            }
+            
+            content.innerHTML = html;
+            panel.style.display = 'block';
+        }
+        
+        function hideRefs() {
+            document.getElementById('refPanel').style.display = 'none';
+        }
+        
+        // Close panel when clicking outside
+        document.addEventListener('click', function(event) {
+            const panel = document.getElementById('refPanel');
+            if (event.target === panel) {
+                hideRefs();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                hideRefs();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "enterprise-ai-2032-presentation",
+  "version": "1.0.0",
+  "description": "Interactive presentation on Enterprise AI predictions and business models for 2032",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/ --watch=.",
+    "start": "live-server --port=8080 --open=/",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "live-server --port=4173 --open=/"
+  },
+  "keywords": [
+    "presentation",
+    "ai",
+    "enterprise",
+    "interactive",
+    "charts"
+  ],
+  "author": "Team Entrepreneurship Course",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/enterprise-ai-2032-presentation.git"
+  },
+  "homepage": "https://enterprise-ai-2032-presentation.vercel.app/",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
